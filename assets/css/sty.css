@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
 body {
   background: #333745;
   color: #fff;
@@ -32,7 +34,7 @@ body {
 }
 .pricing-table .card:nth-child(1) {
   background:#8b8e95;
-  background: linear-gradient(to left, #132d5e, #132d5e, #454570);
+  background: linear-gradient(to left, #a3f208, #181818, #a3f208);
 }
 .pricing-table .card:nth-child(1) .price::before {
   content: "$20";
@@ -43,14 +45,14 @@ body {
   width: 354px;
   height: 400px;
   background:#8b8e95;
-  background: linear-gradient(to left, #132d5e, #132d5e, #454570);
+  background: linear-gradient(to left, #a3f208, #181818, #a3f208);
 }
 .pricing-table .card:nth-child(2) .price::before {
   content: "$50";
 }
 .pricing-table .card:nth-child(3) {
   background:#8b8e95;
-  background: linear-gradient(to left, #132d5e, #132d5e, #454570);
+  background: linear-gradient(to left, #a3f208, #181818, #a3f208);
 }
 .pricing-table .card:nth-child(3) .price::before {
   content: "$100";
@@ -215,4 +217,65 @@ body {
   100% {
     right: -30%;
   }
+}
+ body {
+	 height: 100vh;
+	 padding: 0;
+	 margin: 0;
+	 background: #fff;
+}
+ svg.intro {
+	 background: #181818;
+	 max-width: 600px;
+}
+ svg.intro .text {
+	 display: none;
+}
+ svg.intro.go .text {
+	 text-align: center;
+	 font-family: 'Fugaz One';
+	 font-size: 20px;
+	 text-transform: uppercase;
+	 display: flex;
+}
+ svg.intro.go .text-stroke {
+	 fill: none;
+	 stroke: #a3f208;
+	 stroke-width: 0.8px;
+	 stroke-dashoffset: -900;
+	 stroke-dasharray: 900;
+	 stroke-linecap: butt;
+	 stroke-linejoin: round;
+	 animation: dash 10s ease forwards;
+}
+ svg.intro.go .text-stroke:nth-child(2) {
+	 animation-delay: 0.3s;
+}
+ svg.intro.go .text-stroke-2 {
+	 stroke: #a3f208;
+	 animation-delay: 1.2s;
+}
+ @keyframes dash {
+  30% {
+    stroke-dashoffset: 0;
+ }
+  100%{
+    fill:#a3f208;
+  }
+}
+ .flex-center svg {
+	 vertical-align: middle;
+	 top: -2px;
+   width:100%;
+   height: 100%;
+  text-align: center;
+
+
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100vh;
 }
